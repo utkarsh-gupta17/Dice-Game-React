@@ -1,9 +1,10 @@
 import { useState } from "react"
 import StartGame from "./components/StartGame"
+import GamePlay from "./components/GamePlay";
 
 function App() {
 
-  const [isGameStarted,setisGameStarted] = useState(false);
+  const [isGameStarted,setisGameStarted] = useState(true);
 
   const toggleGamePlay = () =>{
     setisGameStarted((prev)=>!prev);
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <>
-    <StartGame onClick="toggleGamePlay"/>
+    {isGameStarted? <GamePlay/> : <StartGame toggle={toggleGamePlay} />}
     </>
   )
 }
