@@ -15,7 +15,7 @@ const RoleDice = ({roleDice,currentDice}) => {
 export default RoleDice
 
 const DiceContainer = styled.div`
-  margin-top: 3rem;
+  margin-top: 2.1875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
